@@ -1,0 +1,17 @@
+def cek_prima(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+
+n = 15
+list_prima = []
+
+for i in range(2, n+1):
+    if cek_prima(i):
+        list_prima.append(i)
+
+print(list_prima)
